@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "auto_update": false,
   "indent_guides": {
     "enabled": true,
     "line_width": 1,
@@ -36,11 +37,11 @@
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "buffer_font_family": "Hack Nerd Font Mono",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
   "theme": {
     "mode": "system",
-    "light": "blueberry",
-    "dark": "Blankeos Zen Dark"
+    "light": "Ayu Mirage",
+    "dark": "Zedokai"
   },
   "lsp": {
     "tinymist": {
@@ -48,6 +49,15 @@
         "exportPdf": "onSave",
         "outputPath": "$root/$name"
       }
+    }
+  },
+  "languages": {
+    "Python": {
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true
+      },
+      "language_servers": ["ty", "ruff", "!basedpyright"],
+      "format_on_save": "on"
     }
   }
 }

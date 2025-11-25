@@ -27,7 +27,19 @@
   {
     "context": "((Editor && mode == full) && edit_prediction)",
     "bindings": {
-      "alt-q": "editor::NextEditPrediction"
+      "alt-l": "editor::NextEditPrediction"
+    }
+  },
+  {
+    "context": "(Editor && !edit_prediction)",
+    "bindings": {
+      "alt-l": "editor::ShowEditPrediction"
+    }
+  },
+  {
+    "context": "(Editor && edit_prediction_conflict)",
+    "bindings": {
+      "alt-l": "editor::AcceptEditPrediction"
     }
   }
 ]
